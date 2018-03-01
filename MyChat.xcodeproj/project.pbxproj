@@ -14,6 +14,8 @@
 		90F4B3A6204803A700CB8FEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F4B3A4204803A700CB8FEC /* LaunchScreen.storyboard */; };
 		90F4B3B120482C1B00CB8FEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4B3B020482C1A00CB8FEC /* User.swift */; };
 		90F4B3B320482E5400CB8FEC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4B3B220482E5300CB8FEC /* ChatViewController.swift */; };
+		90F4B3B52048438500CB8FEC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4B3B42048438500CB8FEC /* Message.swift */; };
+		90F4B3B720484D1D00CB8FEC /* MyChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4B3B620484D1D00CB8FEC /* MyChatTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		90F4B3A7204803A700CB8FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F4B3B020482C1A00CB8FEC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		90F4B3B220482E5300CB8FEC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		90F4B3B42048438500CB8FEC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		90F4B3B620484D1D00CB8FEC /* MyChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				90F4B3B020482C1A00CB8FEC /* User.swift */,
+				90F4B3B42048438500CB8FEC /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 		90F4B3AE20480BDF00CB8FEC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				90F4B3B620484D1D00CB8FEC /* MyChatTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,7 +174,9 @@
 			files = (
 				90F4B39E204803A700CB8FEC /* NameViewController.swift in Sources */,
 				90F4B39C204803A700CB8FEC /* AppDelegate.swift in Sources */,
+				90F4B3B52048438500CB8FEC /* Message.swift in Sources */,
 				90F4B3B320482E5400CB8FEC /* ChatViewController.swift in Sources */,
+				90F4B3B720484D1D00CB8FEC /* MyChatTableViewCell.swift in Sources */,
 				90F4B3B120482C1B00CB8FEC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
