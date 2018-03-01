@@ -37,8 +37,15 @@ class NameViewController: UIViewController {
 
 
     //MARK: Actions
-    @IBAction func startClick() {
-        print("start - user name = " + txtName.text!)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if let destination = segue.destination as? ChatViewController, let userName = txtName.text {
+            destination.me = User(name: userName)
+            print("start - user name = " + userName)
+            txtName.text = ""
+            txtName.resignFirstResponder()
+
+        }
     }
     
     @IBAction func checkInput() {

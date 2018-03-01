@@ -12,6 +12,8 @@
 		90F4B3A1204803A700CB8FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F4B39F204803A700CB8FEC /* Main.storyboard */; };
 		90F4B3A3204803A700CB8FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F4B3A2204803A700CB8FEC /* Assets.xcassets */; };
 		90F4B3A6204803A700CB8FEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F4B3A4204803A700CB8FEC /* LaunchScreen.storyboard */; };
+		90F4B3B120482C1B00CB8FEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4B3B020482C1A00CB8FEC /* User.swift */; };
+		90F4B3B320482E5400CB8FEC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4B3B220482E5300CB8FEC /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		90F4B3A2204803A700CB8FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90F4B3A5204803A700CB8FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90F4B3A7204803A700CB8FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F4B3B020482C1A00CB8FEC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		90F4B3B220482E5300CB8FEC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 		90F4B3AD20480BA700CB8FEC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				90F4B3B020482C1A00CB8FEC /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				90F4B39D204803A700CB8FEC /* NameViewController.swift */,
+				90F4B3B220482E5300CB8FEC /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,6 +168,8 @@
 			files = (
 				90F4B39E204803A700CB8FEC /* NameViewController.swift in Sources */,
 				90F4B39C204803A700CB8FEC /* AppDelegate.swift in Sources */,
+				90F4B3B320482E5400CB8FEC /* ChatViewController.swift in Sources */,
+				90F4B3B120482C1B00CB8FEC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
