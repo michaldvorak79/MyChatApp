@@ -20,6 +20,9 @@ class NameViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         print("viewDidLoad")
+        if let userName = loadName() {
+            txtName.text = userName
+        }
         checkInput()
         
     }
@@ -44,12 +47,21 @@ class NameViewController: UIViewController {
             print("start - user name = " + userName)
             txtName.text = ""
             txtName.resignFirstResponder()
+            storeName(userName)
 
         }
     }
     
     @IBAction func checkInput() {
         btnStart.isEnabled = txtName.text!.count > 2
+    }
+    
+    func storeName(_ name: String) {
+        UserDefaults.standard.set(name, forKey: "name")
+    }
+    
+    func loadName() -> String? {
+        return UserDefaults.standard.string(forKey: "name")
     }
     
 }

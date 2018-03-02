@@ -179,6 +179,7 @@
                     <connections>
                         <outlet property="btnSend" destination="abO-wX-tSo" id="Aan-dM-HlJ"/>
                         <outlet property="tableView" destination="NvW-yq-sbC" id="Xta-pj-sVT"/>
+                        <outlet property="tableViewBottomConstraint" destination="Nh7-zg-SW3" id="dg2-au-85c"/>
                         <outlet property="txtMessage" destination="wQV-qA-KWX" id="449-v3-wTQ"/>
                     </connections>
                 </viewController>
