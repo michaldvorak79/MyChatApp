@@ -44,8 +44,6 @@ class NameViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
         if let destination = segue.destination as? ChatViewController, let userName = txtName.text {
             destination.me = User(name: userName)
-            print("start - user name = " + userName)
-            txtName.text = ""
             txtName.resignFirstResponder()
             storeName(userName)
 

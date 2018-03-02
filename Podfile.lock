@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.6.0)
   - Crashlytics (3.10.1):
     - Fabric (~> 1.7.5)
   - Fabric (1.7.5)
@@ -32,11 +33,13 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
+  - Alamofire
   - Crashlytics
   - Fabric
   - Firebase/Database
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
   Firebase: 632216af3ed7f31e3be34776947fdc7546cfb572
@@ -48,6 +51,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: b761f5d84fac632e0fc3fb3b83ba08c71b78f7ce
+PODFILE CHECKSUM: 371630e8a86d221caad66d0cf3da0f05ea96ab5a
 
 COCOAPODS: 1.4.0

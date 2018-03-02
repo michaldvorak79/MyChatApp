@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, DataManagerDelegate {
+class ChatViewController: MyViewController, UITextFieldDelegate, UITableViewDataSource, DataManagerDelegate {
     
     var me: User!
     var dataManager : DataManager!
@@ -17,9 +17,11 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewData
     @IBOutlet var txtMessage : UITextField!
     @IBOutlet var tableView : UITableView!
     @IBOutlet var tableViewBottomConstraint : NSLayoutConstraint!
+    @IBOutlet var activityIndicator : UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
         self.dataManager = DataManager(self)
 
         // Do any additional setup after loading the view.
@@ -64,7 +66,14 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewData
     }
     
     func dataManagerDidReceiveNewData(_ manager: DataManager) {
+        dataManager = manager
         tableView.reloadData()
+        activityIndicator.stopAnimating()
+    }
+    
+    func dataManagerError(_ msg: String) {
+        activityIndicator.stopAnimating()
+        self.showError(msg)
     }
 
     //MARK: Keyboard handler

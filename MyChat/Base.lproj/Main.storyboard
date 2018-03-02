@@ -160,9 +160,18 @@
                                     <outlet property="dataSource" destination="m8O-f2-Tuq" id="F29-Et-0Cp"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HQQ-Tb-Ddb">
+                                <rect key="frame" x="462.5" y="399.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bA3-y9-sGM"/>
+                                    <constraint firstAttribute="width" constant="100" id="jrg-tH-YxZ"/>
+                                </constraints>
+                                <color key="color" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="HQQ-Tb-Ddb" firstAttribute="centerY" secondItem="NvW-yq-sbC" secondAttribute="centerY" id="46s-Zx-lLM"/>
                             <constraint firstItem="abO-wX-tSo" firstAttribute="bottom" secondItem="wQV-qA-KWX" secondAttribute="bottom" id="5dH-TC-ag7"/>
                             <constraint firstItem="wQV-qA-KWX" firstAttribute="leading" secondItem="uPn-G1-Usp" secondAttribute="leading" constant="30" id="6IB-Re-nat"/>
                             <constraint firstItem="wQV-qA-KWX" firstAttribute="trailing" secondItem="abO-wX-tSo" secondAttribute="leading" constant="-30" id="8hz-9M-fYJ"/>
@@ -172,11 +181,13 @@
                             <constraint firstItem="uPn-G1-Usp" firstAttribute="bottom" secondItem="NvW-yq-sbC" secondAttribute="bottom" constant="30" id="Nh7-zg-SW3"/>
                             <constraint firstItem="uPn-G1-Usp" firstAttribute="trailing" secondItem="abO-wX-tSo" secondAttribute="trailing" constant="30" id="Nzx-Xp-npD"/>
                             <constraint firstItem="NvW-yq-sbC" firstAttribute="leading" secondItem="uPn-G1-Usp" secondAttribute="leading" constant="30" id="VMi-KW-nbM"/>
+                            <constraint firstItem="HQQ-Tb-Ddb" firstAttribute="centerX" secondItem="NvW-yq-sbC" secondAttribute="centerX" id="nid-Gi-YV2"/>
                             <constraint firstItem="uPn-G1-Usp" firstAttribute="trailing" secondItem="NvW-yq-sbC" secondAttribute="trailing" constant="30" id="s1h-eZ-OoS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uPn-G1-Usp"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="HQQ-Tb-Ddb" id="nJA-hV-nsi"/>
                         <outlet property="btnSend" destination="abO-wX-tSo" id="Aan-dM-HlJ"/>
                         <outlet property="tableView" destination="NvW-yq-sbC" id="Xta-pj-sVT"/>
                         <outlet property="tableViewBottomConstraint" destination="Nh7-zg-SW3" id="dg2-au-85c"/>

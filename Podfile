@@ -11,6 +11,7 @@ def shared_pods
 pod 'Fabric'
 pod 'Crashlytics'
 pod 'Firebase/Database'
+pod 'Alamofire'
 
 end
 

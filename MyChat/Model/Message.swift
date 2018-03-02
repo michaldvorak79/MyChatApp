@@ -23,9 +23,15 @@ class Message {
         self.sender = sender
     }
     
-    init(_ value: [String:AnyObject]) {
-        text = value["text"] as! String
-        sender = User(name: (value["sender"] as! [String:AnyObject])["name"] as! String)
+    init?(_ value: [String:AnyObject]) {
+        if let text = value["text"] as? String,
+            let senderObj = value["sender"] as? [String:AnyObject],
+            let senderName = senderObj["name"] as? String {
+            self.text = text
+            self.sender = User(name: senderName)
+        } else {
+            return nil
+        }
     }
     
     
