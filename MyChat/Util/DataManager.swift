@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 protocol DataManagerDelegate : NSObjectProtocol {
     func dataManagerDidReceiveNewData(_ manager: DataManager)
@@ -19,22 +20,35 @@ class DataManager {
 
     
     init(_ delegate: DataManagerDelegate? = nil) {
-        mockData()
         self.delegate = delegate
 
         //delegate?.dataManagerDidReceiveNewData(self)
+        watchForUpdates()
     }
     
-    func sendMessage(_ text: String, sender: User) {
-        messages.insert(Message(text: text, sender: sender), at: 0)
+    func sendMessage(_ msg : Message) {
+        let trigger = Database.database().reference(withPath: "Messages").childByAutoId()
+        trigger.setValue(msg.dictionaryValue)
+        
+        
+        
+        messages.insert(msg, at: 0)
         delegate?.dataManagerDidReceiveNewData(self)
     }
     
-    //MARK: Debug
-    private func mockData() {
-        messages.append(Message(text: "Testovací zpráva 1", sender:User(name: "Adam")))
-        messages.append(Message(text: "Testovací zpráva 2", sender:User(name: "Barbora")))
-        messages.append(Message(text: "Testovací zpráva 3", sender:User(name: "Cyril")))
+    private func watchForUpdates() {
+        Database.database().reference(withPath: "Messages").observe(.value) {
+            (snapshot) in
+            self.messages = [Message]()
+            for obj in snapshot.children.allObjects {
+                let data = obj as! DataSnapshot
+                let jsonResult = data.value
+                self.messages.insert(Message(jsonResult as! [String: AnyObject]), at:0)
+
+            }
+            
+            self.delegate?.dataManagerDidReceiveNewData(self)
+        }
     }
     
 

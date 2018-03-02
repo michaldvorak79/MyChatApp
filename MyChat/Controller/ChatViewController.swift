@@ -36,7 +36,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewData
     @IBAction func sendMessage() {
         if let msg = txtMessage.text {
             print(msg)
-            dataManager.sendMessage(msg, sender: me)
+            dataManager.sendMessage(Message(text: msg, sender: me))
             txtMessage.text = ""
             txtMessage.resignFirstResponder()
         }
